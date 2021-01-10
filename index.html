@@ -1,0 +1,352 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/only_logo.png">
+    <title> School Website </title>
+</head>
+<body>
+
+    <span id="top">
+
+    <div id="holder">
+        <div id="logo-holder">
+            <img id="logo" src="img/logo.png" alt="Logo" width="400">
+        </div>
+        <span id="search"><button onclick="search()"><img src="img/searchicon.png" height="15" alt="Search"></button></span>
+        <input type="text" id="searchInput">
+    </div>
+    
+    <div id="topnav">
+        
+        <div id="links">
+            <a class="active" href="/index.html" target="_parent">Home</a>
+            <a href="#">Curriculum</a>
+            <a href="#">Co-curriculur</a>
+            <a href="#">Addmission</a>
+            <a href="#">About Us</a>
+            <a href="/contact.html"  target="_parent">Contact</a>  
+        </div>  
+               
+    </div>
+    <div id="news">
+            <span id="news-items">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, nam harum quasi, hic dolorem temporibus delectus perferendis magnam possimus sed laborum nulla accusamus necessitatibus? Ullam tempore vero hic commodi reiciendis.
+            </span>
+    </div>
+</span>
+    <div id="page">
+        
+        <div id="content">
+            <div id="slider">
+                <div id="slide-holder">
+                    <div class="slide"><img src="img/2.png" alt="" class="hylights"></div>
+                    <div class="slide"><img src="img/3.png" alt="" class="hylights"></div>
+                    <div class="slide"><img src="img/4.png" alt="" class="hylights"></div>
+                    <div class="slide"><img src="img/5.png" alt="" class="hylights"></div>
+                    <div class="slide"><img src="img/6.jpeg" alt="" class="hylights"></div>
+                    <div class="slide"><img src="img/7.jpeg" alt="" class="hylights"></div>
+                    <div class="slide"><img src="img/9.jpeg" alt="" class="hylights"></div>
+                    <div class="slide"><img src="img/10.jpeg" alt="" class="hylights"></div> 
+                </div>
+            </div>
+            
+        </div>
+        <br>
+        <br>
+
+        <img src="img/school.jpg" alt="">
+
+        <br>
+        <br>
+        
+    </div>
+    <div id="sidebar">
+
+        <a href="https://www.instagram.com/happinessjssps/" class="social"><img src="img/insta.png" alt="instagram" width="40"></a>
+        <a href="https://twitter.com/happinessjssps" class="social"><img src="img/twitter.png" alt="Twitter" width="40"></a>
+        <a href="https://www.facebook.com/Jss-Private-School-Dubai-389342368505098/" class="social"><img src="img/fb.png" alt="Facebook" width="40"></a>
+       
+    </div>
+    <footer id="footer">
+        <a href="#top">Go Up</a>
+    </footer>
+    
+</body>
+</html>
+
+<script>
+
+    const element = document.getElementById('news-items');
+    let position = 3500;
+    let slide_news = true;
+    element.innerText = "";
+
+    element.addEventListener("mouseover", () =>{
+        slide_news = false;
+    })
+    element.addEventListener("mouseout", () =>{
+        slide_news = true;
+    })
+
+    for (let news = 0; news < 20; news++) {
+
+        element.innerText += " lorem Ipsum " + " | ";
+    }
+
+    window.setInterval(() =>{
+        if(slide_news){
+            position--;
+        }
+        element.style.padding = "0px " + position.toString() + "px";
+    }, 10)
+
+    window.setInterval(() => {
+        position = 3500;
+    }, 35000)
+
+</script>
+
+<style>
+
+    footer{
+        background-color: rgb(148, 230, 245);
+        width: 100%;
+        height: 32px;
+    }
+
+    footer a{
+        display: block;
+        background-color: rgb(112, 173, 184);
+        border: 2px solid #cccccc;
+        float: right;
+        padding: 5px;
+    }
+
+    .social{
+        display: block;
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+
+    #slide-holder{
+        float: left;
+        width: max-content;
+    }
+
+    #slider{
+        position: relative;
+        height: 430px;
+        width: 1200px;
+        overflow-y: hidden;
+        background-color: #cccccc;
+        margin-top: 40px;
+    }
+
+    .slide{
+        float: left;
+        width: 1200px;
+        white-space: nowrap;
+        padding: 10px;
+        margin: 0;
+    }
+
+    .highlights{
+        float: left;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 400px;
+        white-space: nowrap;
+    }
+
+    .active{
+        background-color: rgb(108, 190, 205);
+    }
+
+    #links{
+        margin-left: 400px;
+    }
+
+    #topnav {
+        overflow: hidden;
+        background-color: rgb(148, 230, 245);
+        margin-left: -20px;
+        border-radius: 5px;
+        float: top;
+        width: 105%;
+        border: 0;
+    }
+    news-items{
+        display: block;
+    }
+
+    #news{
+        overflow: hidden;
+        background-color: rgb(57, 255, 123);
+        margin-left: -2000px;
+        padding: 10px;
+        border-radius: 5px;
+        float: top;
+        width: 300%;
+        border: 0;
+        white-space: nowrap
+    }
+    #logo{
+        display: block;
+        margin-left: 20px;
+        padding-top: 20px;
+        padding-bottom: 10px;
+        animation: Appear 3s;
+    }
+    #holder{
+        overflow: hidden;
+        background-color: white;
+        margin: -10px -10px;
+        width: 102%;
+        height: 130px;
+    }
+
+    #logo-holder{
+        width: 20%;
+        float: left;
+    }
+
+    #topnav a {
+      float: left;
+      display: block;
+      color: black;
+      text-align: center;
+      padding: 14px 30px;
+      margin: 4px;
+      text-decoration: none;
+      font-size: 17px;
+      border-radius: 5px;
+    }
+
+    #topnav a:hover {
+      background-color: rgb(128, 210, 225);
+      color: black;
+    }
+   
+    input[type=text] {
+    float: right;
+    padding: 10px;
+    margin-top: 40px;
+    border: 2px solid #cccccc;
+    border-radius: 5px;
+    margin-right: 16px;
+    font-size: 16px;
+    width: 300px;   
+    }
+    
+    #search button{
+      float: right;
+      margin-top: 40px;
+      margin-right: 10px;
+      display: block;
+      color: black;
+      text-align: center;
+      padding: 12px 16px;
+      text-decoration: none;
+    }
+
+    body{
+        background-color: rgb(255, 255, 255);
+        overflow-x: hidden;
+    }
+
+    #page{
+        width: 80%;
+        height: fit-content;
+        margin: auto;
+        overflow: hidden;
+    }
+
+    #sidebar{
+        position: fixed;
+        height: 200px;
+        width: 75px;
+        float: left;
+        top: 300px;
+        left: -20px;
+        border-radius: 10px;
+        background: #88f0c7;
+    }
+
+    @keyframes Appear {
+        0%   { opacity: 0; }
+        100% { opacity: 1; }
+    }
+</style>
+
+<!--
+<script>
+    const sidebar = document.getElementById("side");
+    let gifno = 0;
+
+    async function gifs(){
+
+        sidebar.innerHTML = ""
+        console.log("reloading");
+
+        const url = "https://api.giphy.com/v1/gifs/trending?api_key=2JZZxo7KRsG7en632XNtUW7VcOY4JlK1";
+        const data = await fetch(url);
+        const response = await data.json();
+        
+        for (gif = 0; gif < response.data.length; gif++) {
+            gifno++
+            const element = response.data[gifno];
+            const gifURL = element.images.fixed_height_small.url;
+
+            const image = document.createElement("img");
+            image.src = gifURL;
+            sidebar.appendChild(image)
+
+            if(gifno >= 50){
+                gifno = 0;
+            }
+
+            if (gif >= 15) {
+                gifno = gif;
+                console.log("done")
+                break
+            }
+        }
+    }
+    
+    gifs();
+    
+    setInterval(async function(){
+
+        sidebar.innerHTML = ""
+        console.log("reloading");
+
+        const url = "https://api.giphy.com/v1/gifs/trending?api_key=2JZZxo7KRsG7en632XNtUW7VcOY4JlK1";
+        const data = await fetch(url);
+        const response = await data.json();
+
+        for (gif = 0; gif < response.data.length; gif++) {
+            gifno++
+            console.log(gifno)
+            const element = response.data[gifno];
+            const gifURL = element.images.fixed_height_small.url;
+
+            const image = document.createElement("img");
+            image.src = gifURL;
+            sidebar.appendChild(image)
+
+            if(gifno >= response.data.length - 5){
+                gifno = 0;
+            }
+
+            if (gif >= 15) {
+                console.log("done")
+                break
+            }
+        }
+        }, 20000)
+
+</script>
+-->
